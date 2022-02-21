@@ -29,7 +29,7 @@ public class Contracts {
         c1.setEnd_date(c.getEnd_date());
         c1.setDays(c.getDays());
         c1.setLoop(c.getLoop());
-        c1.setId_Companie(c.getId_Companie());
+        c1.setId_companie(c.getId_companie());
         contractrep.save(c1);
     }
 

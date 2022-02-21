@@ -12,7 +12,7 @@ public class Contract {
     @Id
     private String id_contract;
     private String id_client;
-    private String id_Companie;
+    private String id_companie;
     private String id_ad;
     private int loop;
     private int days;
