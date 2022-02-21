@@ -17,6 +17,7 @@ public class Clients {
     }
 
     public void addclient(Client c) {
+        c.setId_client(null);
         clientrep.save(c);
     }
 

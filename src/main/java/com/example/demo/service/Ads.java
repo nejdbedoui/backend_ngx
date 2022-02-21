@@ -17,6 +17,7 @@ public class Ads {
     }
 
     public void addad(Ad a) {
+        a.setId_ad(null);
         adrep.save(a);
     }
 
