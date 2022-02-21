@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.Ad;
+import com.example.demo.entity.Client;
 import com.example.demo.entity.Companie;
 import com.example.demo.repository.Companierep;
 import com.example.demo.service.Companies;
@@ -33,4 +34,17 @@ public class Companiec {
     public void Addcompanie(@RequestBody Companie c)  {
         companies.addcompanie(c);
     }
+
+    @PutMapping(value = "/update_companie")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public void Updateclient(@RequestBody Companie c){
+        companies.updatecomp(c);
+    }
+
+    @DeleteMapping(value = "/delete_companie/{idc}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public void deletecl(@PathVariable("idc") String id){
+        companies.deletecomp(id);
+    }
+
 }

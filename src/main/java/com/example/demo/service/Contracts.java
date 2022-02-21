@@ -17,6 +17,7 @@ public class Contracts {
     }
 
     public void addcontract(Contract c) {
+        c.setId_contract(null);
         contractrep.save(c);
     }
 
