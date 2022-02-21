@@ -25,6 +25,7 @@ public class Ads {
         String id=a.getId_ad();
         Ad ad=adrep.findById(id).orElse(null);
         ad.setLink(a.getLink());
+        ad.setTitle(a.getTitle());
         adrep.save(ad);
     }
 
