@@ -28,19 +28,19 @@ public class Adc {
     }
 
     @PostMapping(value = "/add_ad")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com")
+    @CrossOrigin(origins = "*")
     public void Addad(@RequestBody Ad a)  {
         ads.addad(a);
     }
 
     @PutMapping(value = "/update_ad")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void Update(@RequestBody Ad a){
         ads.updatead(a);
     }
 
     @DeleteMapping(value = "/delete_ad/{ida}")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void deletecl(@PathVariable("ida") String id) {
         ads.deletead(id);
     }
