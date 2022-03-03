@@ -22,26 +22,26 @@ public class Clientc {
     }
 
     @GetMapping(value = "/getclient")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public List<Client> Getclient(){
         return clients.Getclient();
     }
 
 
     @PostMapping(value = "/add_client")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void Addclient(@RequestBody Client c)  {
         clients.addclient(c);
     }
 
     @PutMapping(value = "/update_client")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void Updateclient(@RequestBody Client c){
         clients.updatecl(c);
     }
 
     @DeleteMapping(value = "/delete_client/{idc}")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void deletecl(@PathVariable("idc") String id){
         clients.deletecl(id);
     }
