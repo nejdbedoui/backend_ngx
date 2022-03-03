@@ -24,7 +24,7 @@ public class Adc {
     }
 
     @GetMapping(value = "/get_ad")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public List<Ad> Getad(){
         return ads.Getad();
     }
