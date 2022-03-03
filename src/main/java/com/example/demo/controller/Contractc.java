@@ -22,6 +22,7 @@ public class Contractc {
     public Contractc(Contracts contracts){
         this.contracts=contracts;
     }
+
     @GetMapping(value = "/get_contract")
     @CrossOrigin(origins = "*")
     public List<Contract> Getcontract(){
