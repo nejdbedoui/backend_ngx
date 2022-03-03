@@ -24,25 +24,25 @@ public class Companiec {
     }
 
     @GetMapping(value = "/get_Companies")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public List<Companie> Getcompanie(){
         return companies.Getcompanie();
     }
 
     @PostMapping(value = "/add_Companie")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void Addcompanie(@RequestBody Companie c)  {
         companies.addcompanie(c);
     }
 
     @PutMapping(value = "/update_companie")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void Updateclient(@RequestBody Companie c){
         companies.updatecomp(c);
     }
 
     @DeleteMapping(value = "/delete_companie/{idc}")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "*")
     public void deletecl(@PathVariable("idc") String id){
         companies.deletecomp(id);
     }
