@@ -28,7 +28,7 @@ public class Adc {
     }
 
     @PostMapping(value = "/add_ad")
-    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com")
     public void Addad(@RequestBody Ad a)  {
         ads.addad(a);
     }
