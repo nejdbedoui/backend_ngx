@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Category;
 import com.example.demo.entity.Ad;
-import com.example.demo.entity.Contract;
 import com.example.demo.repository.Adrep;
 import com.example.demo.service.Ads;
 import lombok.AllArgsConstructor;
@@ -24,25 +22,25 @@ public class Adc {
     }
 
     @GetMapping(value = "/get_ad")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public List<Ad> Getad(){
         return ads.Getad();
     }
 
     @PostMapping(value = "/add_ad")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public void Addad(@RequestBody Ad a)  {
         ads.addad(a);
     }
 
     @PutMapping(value = "/update_ad")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public void Update(@RequestBody Ad a){
         ads.updatead(a);
     }
 
     @DeleteMapping(value = "/delete_ad/{ida}")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public void deletecl(@PathVariable("ida") String id) {
         ads.deletead(id);
     }

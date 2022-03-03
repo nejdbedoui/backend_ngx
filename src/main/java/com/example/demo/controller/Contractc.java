@@ -23,25 +23,25 @@ public class Contractc {
         this.contracts=contracts;
     }
     @GetMapping(value = "/get_contract")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public List<Contract> Getcontract(){
         return contracts.Getcontract();
     }
 
     @PostMapping(value = "/add_conract")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public void Addcontract(@RequestBody Contract c)  {
         contracts.addcontract(c);
     }
 
     @PutMapping(value = "/update_contract")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public void Updatecontract(@RequestBody Contract c){
         contracts.updatecontract(c);
     }
 
     @DeleteMapping(value = "/delete_contract/{idc}")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://backendnejd.herokuapp.com/")
     public void deletecontract(@PathVariable("idc") String id){
         contracts.deletecontract(id);
     }
