@@ -33,8 +33,10 @@ public class Showc {
 
     @PostMapping(value = "/add_show")
     @CrossOrigin(origins = "*")
-    public void Addshow(@RequestBody Show s)  {
-        shows1.add(s);
+    public void Addshow(@RequestBody Contract contract)  {
+        shows1.add(contract);
     }
+
+
 
 }
