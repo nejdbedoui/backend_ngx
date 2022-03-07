@@ -24,7 +24,6 @@ public class Contracts {
         c.setId_contract(null);
         c.setAd(adrep.findById(c.getAd().getId_ad()).orElse(null));
         c.setClient(clientrep.findById(c.getClient().getId_client()).orElse(null));
-        c.setCompanie(companierep.findById(c.getCompanie().getId_companie()).orElse(null));
         contractrep.save(c);
     }
 
