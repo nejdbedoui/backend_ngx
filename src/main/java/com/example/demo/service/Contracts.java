@@ -4,6 +4,7 @@ import com.example.demo.entity.Client;
 import com.example.demo.entity.Contract;
 import com.example.demo.repository.Adrep;
 import com.example.demo.repository.Clientrep;
+import com.example.demo.repository.Companierep;
 import com.example.demo.repository.Contractrep;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ public class Contracts {
     private final Contractrep contractrep;
     private final Adrep adrep;
     private final Clientrep clientrep;
+    private final Companierep companierep;
     public List<Contract> Getcontract() {
         return contractrep.findAll();
     }
@@ -24,6 +26,7 @@ public class Contracts {
         c.setId_contract(null);
         c.setAd(adrep.findById(c.getAd().getId_ad()).orElse(null));
         c.setClient(clientrep.findById(c.getClient().getId_client()).orElse(null));
+        c.setCompanie(companierep.findById(c.getCompanie().getId_companie()).orElse(null));
         contractrep.save(c);
     }
 
