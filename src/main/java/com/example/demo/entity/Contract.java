@@ -11,9 +11,9 @@ import java.util.Date;
 public class Contract {
     @Id
     private String id_contract;
-    private String id_client;
-    private String id_companie;
-    private String id_ad;
+    private Client client;
+    private Companie companie;
+    private Ad ad;
     private int loop;
     private int days;
     private Date start_date;
