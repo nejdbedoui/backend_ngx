@@ -26,7 +26,7 @@ public class Shows {
         System.out.println(contract);
         Contract c=contractrep.findById(contract.getId_contract()).orElse(null);
         Show s = new Show();
-        s.setLink(c.getAd().getId_ad());
+        s.setLink(c.getAd().getLink());
         s.setStart_date(c.getStart_date());
         s.setEnd_date(c.getEnd_date());
         showrep.save(s);
